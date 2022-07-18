@@ -1,0 +1,6 @@
+{
+  "require": {
+    "league/oauth2-linkedin": "^5.1",
+    "curl/curl": "^2.3"
+  }
+}

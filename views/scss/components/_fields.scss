@@ -1,0 +1,67 @@
+@import "./base";
+
+.field {
+  z-index: 2;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  width: 100%;
+
+  label {
+    font-family: $font-secondary;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: $primary-dark;
+  }
+
+  input {
+    border: none;
+    border-radius: 5px;
+    background-color: $dark-white;
+    padding: 19px 26px 19px 26px;
+    font-family: $font-secondary;
+    font-weight: 600;
+    font-size: 0.9rem;
+
+    &::placeholder {
+      font-style: normal;
+      color: $placeholder;
+    }
+
+    &:focus {
+      outline: 1px solid $primary-dark;
+    }
+
+    &:valid {
+      outline: 1px solid $primary-dark;
+    }
+
+    &.error {
+      outline: 1px solid $red;
+    }
+  }
+
+  span.error {
+    font-size: 90%;
+    color: $red;
+    margin-top: 2px;
+    margin-left: 2px;
+  }
+}
+
+.error-message {
+  background-color: $red;
+  color: $primary-white;
+  font-family: $font-primary;
+  width: 100%;
+  text-align: center;
+  font-size: 0.9rem;
+  border-radius: 2px;
+  margin-top: 10px;
+  padding: {
+    left: 1%;
+    right: 1%;
+    top: 4%;
+    bottom: 4%;
+  }
+}

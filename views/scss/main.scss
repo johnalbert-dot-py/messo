@@ -1,0 +1,102 @@
+@import "./components/base";
+@import "./components/fields";
+@import "./components/buttons";
+
+body {
+  background-color: $primary-white;
+}
+
+main {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  height: 100%;
+
+  .card {
+    background-color: $secondary-white;
+    border-radius: 9px;
+    box-shadow: 0px 12px 33px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+
+    padding: {
+      top: 34px;
+      bottom: 34px;
+      left: 48px;
+      right: 48px;
+    }
+
+    .card-bg-image {
+      height: 90%;
+      position: absolute;
+      margin-right: -720px;
+      opacity: 0.07;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    &.card-sm {
+      width: 566px;
+    }
+
+    &.card-lg {
+      width: 675px;
+    }
+
+    .title {
+      h1 {
+        font-size: 2.4rem;
+      }
+      text-align: center;
+    }
+
+    .fields {
+      margin-top: 24px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 15px;
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 23px;
+      }
+
+      .or {
+        text-align: center;
+        font-weight: 600;
+        color: $placeholder;
+      }
+
+      .or-line {
+        margin-top: 13px;
+        margin-bottom: 13px;
+        text-align: center;
+        font-weight: 600;
+        color: $placeholder;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        div {
+          background-color: rgba($color: $primary-dark, $alpha: 0.4);
+          height: 1px;
+          width: 100%;
+        }
+      }
+
+      .social-logins {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        width: 100%;
+        gap: 10px;
+      }
+    }
+  }
+}

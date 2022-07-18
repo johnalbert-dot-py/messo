@@ -1,0 +1,72 @@
+// colors
+$primary-white: #f9f9f9;
+$secondary-white: #fff;
+$primary-dark: #292929;
+$secondary-dark: #000;
+$dark-white: #f3f3f3;
+$blue: #1877f2;
+$light-blue: #0077b5;
+$green: #289a33;
+$red: #9a2828;
+$placeholder: rgba(
+  $color: #292929,
+  $alpha: 0.45,
+);
+
+// fonts
+$font-primary: "Helvetica Neueu", sans-serif;
+$font-secondary: "Open Sans", sans-serif;
+$font-tertiary: "SF Pro Display", sans-serif;
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  outline-color: transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-primary;
+  color: $primary-dark;
+  letter-spacing: -0.025em;
+}
+
+p,
+a,
+span {
+  font-size: 1.025rem;
+  color: rgba($color: $primary-dark, $alpha: 0.83);
+  font-family: $font-primary;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+a {
+  color: $blue;
+}
+
+[v-cloak] {
+  display: none;
+}

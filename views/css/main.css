@@ -1,0 +1,538 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  outline-color: transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Helvetica Neueu", sans-serif;
+  color: #292929;
+  letter-spacing: -0.025em;
+}
+
+p,
+a,
+span {
+  font-size: 1.025rem;
+  color: rgba(41, 41, 41, 0.83);
+  font-family: "Helvetica Neueu", sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+a {
+  color: #1877f2;
+}
+
+[v-cloak] {
+  display: none;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  outline-color: transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Helvetica Neueu", sans-serif;
+  color: #292929;
+  letter-spacing: -0.025em;
+}
+
+p,
+a,
+span {
+  font-size: 1.025rem;
+  color: rgba(41, 41, 41, 0.83);
+  font-family: "Helvetica Neueu", sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+a {
+  color: #1877f2;
+}
+
+[v-cloak] {
+  display: none;
+}
+
+.field {
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.field label {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #292929;
+}
+
+.field input {
+  border: none;
+  border-radius: 5px;
+  background-color: #f3f3f3;
+  padding: 19px 26px 19px 26px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.field input::-webkit-input-placeholder {
+  font-style: normal;
+  color: rgba(41, 41, 41, 0.45);
+}
+
+.field input:-ms-input-placeholder {
+  font-style: normal;
+  color: rgba(41, 41, 41, 0.45);
+}
+
+.field input::-ms-input-placeholder {
+  font-style: normal;
+  color: rgba(41, 41, 41, 0.45);
+}
+
+.field input::placeholder {
+  font-style: normal;
+  color: rgba(41, 41, 41, 0.45);
+}
+
+.field input:focus {
+  outline: 1px solid #292929;
+}
+
+.field input:valid {
+  outline: 1px solid #292929;
+}
+
+.field input.error {
+  outline: 1px solid #9a2828;
+}
+
+.field span.error {
+  font-size: 90%;
+  color: #9a2828;
+  margin-top: 2px;
+  margin-left: 2px;
+}
+
+.error-message {
+  background-color: #9a2828;
+  color: #f9f9f9;
+  font-family: "Helvetica Neueu", sans-serif;
+  width: 100%;
+  text-align: center;
+  font-size: 0.9rem;
+  border-radius: 2px;
+  margin-top: 10px;
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-top: 4%;
+  padding-bottom: 4%;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  outline-color: transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Helvetica Neueu", sans-serif;
+  color: #292929;
+  letter-spacing: -0.025em;
+}
+
+p,
+a,
+span {
+  font-size: 1.025rem;
+  color: rgba(41, 41, 41, 0.83);
+  font-family: "Helvetica Neueu", sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+a {
+  color: #1877f2;
+}
+
+[v-cloak] {
+  display: none;
+}
+
+.btn {
+  border: none;
+  font-family: "SF Pro Display", sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.2px;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  z-index: 2;
+}
+
+.btn-lg {
+  padding: 4%;
+  border-radius: 5px;
+}
+
+.btn-md {
+  padding: 3%;
+  border-radius: 3px;
+}
+
+.btn-sm {
+  padding: 2%;
+  border-radius: 3px;
+}
+
+.btn-dark {
+  background-color: #292929;
+  color: #f9f9f9;
+}
+
+.btn-dark:hover {
+  background-color: rgba(41, 41, 41, 0.9);
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.btn-dark:active {
+  background-color: rgba(41, 41, 41, 0.8);
+}
+
+.btn-light {
+  background-color: #f9f9f9;
+  color: #292929;
+}
+
+.social-btn {
+  border-radius: 10px;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px;
+  gap: 15px;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  z-index: 2;
+}
+
+.social-btn:hover {
+  cursor: pointer;
+}
+
+.social-btn span {
+  font-family: "Roboto", sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 1rem;
+}
+
+.social-btn.facebook {
+  background-color: #1877f2;
+}
+
+.social-btn.facebook span {
+  color: #f9f9f9;
+}
+
+.social-btn.facebook:hover {
+  -webkit-filter: grayscale(0.4);
+          filter: grayscale(0.4);
+}
+
+.social-btn.google {
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.084), 0px 2px 3px rgba(0, 0, 0, 0.168);
+          box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.084), 0px 2px 3px rgba(0, 0, 0, 0.168);
+}
+
+.social-btn.google span {
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.social-btn.google:hover {
+  -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.084), 0px 2px 10px rgba(0, 0, 0, 0.168);
+          box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.084), 0px 2px 10px rgba(0, 0, 0, 0.168);
+}
+
+.social-btn.apple {
+  background-color: #000;
+  -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.084), 0px 2px 3px rgba(0, 0, 0, 0.168);
+          box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.084), 0px 2px 3px rgba(0, 0, 0, 0.168);
+}
+
+.social-btn.apple span {
+  color: #fff;
+  font-weight: 500 !important;
+}
+
+.social-btn.apple:hover {
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.084), 0px 2px 10px rgba(0, 0, 0, 0.168);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.084), 0px 2px 10px rgba(0, 0, 0, 0.168);
+}
+
+.social-btn.microsoft {
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.084), 0px 2px 3px rgba(0, 0, 0, 0.168);
+          box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.084), 0px 2px 3px rgba(0, 0, 0, 0.168);
+  outline: 1px solid #292929;
+}
+
+.social-btn.microsoft span {
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.social-btn.microsoft:hover {
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.084), 0px 2px 10px rgba(0, 0, 0, 0.168);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.084), 0px 2px 10px rgba(0, 0, 0, 0.168);
+}
+
+.social-btn.linkedin {
+  background-color: #0077b5;
+  -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.084), 0px 2px 3px rgba(0, 0, 0, 0.168);
+          box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.084), 0px 2px 3px rgba(0, 0, 0, 0.168);
+}
+
+.social-btn.linkedin span {
+  color: #f9f9f9;
+  font-weight: 700 !important;
+  font-family: "Helvetica Neueu", sans-serif;
+}
+
+.social-btn.linkedin:hover {
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.084), 0px 2px 10px rgba(0, 0, 0, 0.168);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.084), 0px 2px 10px rgba(0, 0, 0, 0.168);
+}
+
+body {
+  background-color: #f9f9f9;
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  height: 100%;
+}
+
+main .card {
+  background-color: #fff;
+  border-radius: 9px;
+  -webkit-box-shadow: 0px 12px 33px rgba(0, 0, 0, 0.06);
+          box-shadow: 0px 12px 33px rgba(0, 0, 0, 0.06);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  position: relative;
+  padding-top: 34px;
+  padding-bottom: 34px;
+  padding-left: 48px;
+  padding-right: 48px;
+}
+
+main .card .card-bg-image {
+  height: 90%;
+  position: absolute;
+  margin-right: -720px;
+  opacity: 0.07;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+}
+
+main .card.card-sm {
+  width: 566px;
+}
+
+main .card.card-lg {
+  width: 675px;
+}
+
+main .card .title {
+  text-align: center;
+}
+
+main .card .title h1 {
+  font-size: 2.4rem;
+}
+
+main .card .fields {
+  margin-top: 24px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 15px;
+}
+
+main .card .fields form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 23px;
+}
+
+main .card .fields .or {
+  text-align: center;
+  font-weight: 600;
+  color: rgba(41, 41, 41, 0.45);
+}
+
+main .card .fields .or-line {
+  margin-top: 13px;
+  margin-bottom: 13px;
+  text-align: center;
+  font-weight: 600;
+  color: rgba(41, 41, 41, 0.45);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+main .card .fields .or-line div {
+  background-color: rgba(41, 41, 41, 0.4);
+  height: 1px;
+  width: 100%;
+}
+
+main .card .fields .social-logins {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  width: 100%;
+  gap: 10px;
+}
+/*# sourceMappingURL=main.css.map */
