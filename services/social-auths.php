@@ -126,5 +126,6 @@ class MicrosoftSocialLogin extends SocialLogin
 
     public static function getDetails()
     {
+        // implemented on client side
     }
 }
