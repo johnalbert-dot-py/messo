@@ -105,6 +105,7 @@ class LinkedInSocialLogin extends SocialLogin
                 "id" => $user_linkedin_id,
                 "error" => "",
             ];
+
             return $user_data;
         } catch (Exception $e) {
             echo $e;

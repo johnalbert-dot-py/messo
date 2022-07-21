@@ -7,7 +7,8 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/services/social-auths.php");
 $provider = LinkedInSocialLogin::getProvider();
 
 if (!isset($_GET['code'])) {
-    $authUrl = $provider->getAuthorizationUrl();
+    $options = ["scope" => []];
+    $authUrl = $provider->getAuthorizationUrl($options);
     $_SESSION['oauth2state'] = $provider->getState();
     header('Location: ' . $authUrl);
     exit;

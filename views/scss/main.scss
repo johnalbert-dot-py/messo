@@ -6,6 +6,51 @@ body {
   background-color: $primary-white;
 }
 
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: $primary-dark;
+  position: fixed;
+  padding: {
+    top: 1.5%;
+    bottom: 1.5%;
+    left: 20%;
+    right: 20%;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    color: $primary-white;
+    font-family: $font-tertiary;
+    letter-spacing: 1px;
+  }
+
+  .items {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    a {
+      color: #fff;
+      font-family: $font-tertiary;
+      font-weight: 400;
+      letter-spacing: 0.8px;
+      color: rgba($color: #fff, $alpha: 0.5);
+      transition: 0.2s;
+
+      &:hover {
+        color: #fff;
+        transition: 0.2s;
+      }
+
+      &.active {
+        color: #fff;
+      }
+    }
+  }
+}
+
 main {
   display: grid;
   justify-content: center;
@@ -98,5 +143,10 @@ main {
         gap: 10px;
       }
     }
+  }
+
+  .container {
+    padding-left: 20%;
+    padding-right: 20%;
   }
 }

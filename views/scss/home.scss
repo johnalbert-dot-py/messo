@@ -1,0 +1,196 @@
+@import "./components/base";
+@import "./components/fields";
+@import "./components/buttons";
+
+body {
+  background-color: $primary-white;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: fixed;
+
+  padding: {
+    top: 1.5%;
+    bottom: 1.5%;
+    left: 20%;
+    right: 20%;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    color: $primary-white;
+    font-family: $font-tertiary;
+    letter-spacing: 1px;
+  }
+
+  .items {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    a {
+      color: #fff;
+      font-family: $font-tertiary;
+      font-weight: 400;
+      letter-spacing: 0.8px;
+      color: rgba($color: #fff, $alpha: 0.5);
+      transition: 0.2s;
+
+      &:hover {
+        color: #fff;
+        transition: 0.2s;
+      }
+
+      &.active {
+        color: #fff;
+      }
+    }
+  }
+  background-color: rgba($color: $primary-dark, $alpha: 1);
+  transition: 0.2s ease-in-out;
+
+  &.lighten {
+    transition: 0.2s ease-in-out;
+    background-color: rgba($color: $primary-dark, $alpha: 0.8);
+    backdrop-filter: blur(15px);
+  }
+}
+
+main {
+  padding-top: 150px;
+  padding-bottom: 50px;
+  .container {
+    padding: {
+      left: 20.3%;
+      right: 20.3%;
+    }
+
+    .greet {
+      background-color: $primary-dark;
+      border-radius: 4px;
+      text-align: center;
+      font-weight: bolder;
+      padding: {
+        top: 31px;
+        bottom: 31px;
+      }
+
+      h1 {
+        font-size: 1.9rem;
+        color: #fff !important;
+        font-family: $font-tertiary;
+        letter-spacing: 0.9px;
+      }
+    }
+
+    .list-of-users {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-column-gap: 12px;
+      grid-row-gap: 8px;
+    }
+
+    .flat-card {
+      background-color: #f0f0f0;
+      padding: {
+        top: 47px;
+        bottom: 47px;
+        left: 36px;
+        right: 36px;
+      }
+      color: $secondary-dark !important;
+
+      .user-info {
+        .username,
+        .full-name,
+        .date-joined {
+          font-family: $font-tertiary;
+          font-weight: bold;
+          letter-spacing: 0.5px;
+        }
+
+        .username {
+          font-size: 0.9rem;
+        }
+
+        .full-name {
+          font-size: 1.5rem;
+        }
+
+        .date-joined {
+          font-size: 0.8rem;
+          font-weight: lighter;
+        }
+      }
+
+      .user-action {
+        margin-top: 15px;
+      }
+
+      button {
+        padding: 3%;
+        border-radius: 5px;
+        font-family: $font-tertiary;
+        letter-spacing: 0.8px;
+        font-weight: 400;
+        border: none;
+        transition: 0.2s ease-in-out;
+
+        &.facebook {
+          background-color: $blue;
+          color: #fff;
+        }
+
+        &.google {
+          background-color: #fff;
+          color: $primary-dark;
+          box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.084),
+            0px 2px 3px rgba(0, 0, 0, 0.168);
+        }
+
+        &.linkedin {
+          background-color: $light-blue;
+          color: $primary-white;
+        }
+
+        &.apple {
+          background-color: $secondary-dark;
+          color: $primary-white;
+        }
+
+        &.microsoft {
+          background-color: $primary-white;
+          color: $primary-dark;
+          outline: 1px solid $primary-dark;
+        }
+
+        &:hover {
+          filter: grayscale(40%);
+          cursor: pointer;
+        }
+
+        &:active {
+          filter: grayscale(0%);
+        }
+      }
+    }
+
+    .card {
+      background-color: $secondary-white;
+      border-radius: 9px;
+      box-shadow: 0px 12px 33px rgba(0, 0, 0, 0.06);
+
+      padding: {
+        top: 34px;
+        bottom: 34px;
+        left: 48px;
+        right: 48px;
+      }
+    }
+  }
+}

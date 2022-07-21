@@ -1,7 +1,21 @@
 <?php
 
+class LoginRequired
+{
+    public function __construct()
+    {
+        if (!isset($_SESSION["logged_in"])) {
+            if (!$_SESSION["logged_in"]) {
+                return header("Location: /views/");
+            }
+        }
+    }
+}
+
 class Controller
 {
+
+    public $login_required = false;
 
     public function get()
     {
@@ -21,6 +35,9 @@ class Controller
 
     public function __construct()
     {
+        if ($this->login_required) {
+            new LoginRequired();
+        }
     }
 
     public function getContext()

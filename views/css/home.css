@@ -414,12 +414,14 @@ nav {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
-  background-color: #292929;
   position: fixed;
   padding-top: 1.5%;
   padding-bottom: 1.5%;
   padding-left: 20%;
   padding-right: 20%;
+  background-color: #292929;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 nav h2 {
@@ -436,7 +438,7 @@ nav .items {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 25px;
+  gap: 30px;
 }
 
 nav .items a {
@@ -459,141 +461,144 @@ nav .items a.active {
   color: #fff;
 }
 
-main {
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  height: 100%;
+nav.lighten {
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  background-color: rgba(41, 41, 41, 0.8);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
 }
 
-main .card {
+main {
+  padding-top: 150px;
+  padding-bottom: 50px;
+}
+
+main .container {
+  padding-left: 20.3%;
+  padding-right: 20.3%;
+}
+
+main .container .greet {
+  background-color: #292929;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: bolder;
+  padding-top: 31px;
+  padding-bottom: 31px;
+}
+
+main .container .greet h1 {
+  font-size: 1.9rem;
+  color: #fff !important;
+  font-family: "SF Pro Display", sans-serif;
+  letter-spacing: 0.9px;
+}
+
+main .container .list-of-users {
+  margin-top: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 12px;
+  grid-row-gap: 8px;
+}
+
+main .container .flat-card {
+  background-color: #f0f0f0;
+  padding-top: 47px;
+  padding-bottom: 47px;
+  padding-left: 36px;
+  padding-right: 36px;
+  color: #000 !important;
+}
+
+main .container .flat-card .user-info .username,
+main .container .flat-card .user-info .full-name,
+main .container .flat-card .user-info .date-joined {
+  font-family: "SF Pro Display", sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+main .container .flat-card .user-info .username {
+  font-size: 0.9rem;
+}
+
+main .container .flat-card .user-info .full-name {
+  font-size: 1.5rem;
+}
+
+main .container .flat-card .user-info .date-joined {
+  font-size: 0.8rem;
+  font-weight: lighter;
+}
+
+main .container .flat-card .user-action {
+  margin-top: 15px;
+}
+
+main .container .flat-card button {
+  padding: 3%;
+  border-radius: 5px;
+  font-family: "SF Pro Display", sans-serif;
+  letter-spacing: 0.8px;
+  font-weight: 400;
+  border: none;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+main .container .flat-card button.facebook {
+  background-color: #1877f2;
+  color: #fff;
+}
+
+main .container .flat-card button.google {
+  background-color: #fff;
+  color: #292929;
+  -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.084), 0px 2px 3px rgba(0, 0, 0, 0.168);
+          box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.084), 0px 2px 3px rgba(0, 0, 0, 0.168);
+}
+
+main .container .flat-card button.linkedin {
+  background-color: #0077b5;
+  color: #f9f9f9;
+}
+
+main .container .flat-card button.apple {
+  background-color: #000;
+  color: #f9f9f9;
+}
+
+main .container .flat-card button.microsoft {
+  background-color: #f9f9f9;
+  color: #292929;
+  outline: 1px solid #292929;
+}
+
+main .container .flat-card button:hover {
+  -webkit-filter: grayscale(40%);
+          filter: grayscale(40%);
+  cursor: pointer;
+}
+
+main .container .flat-card button:active {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+}
+
+main .container .card {
   background-color: #fff;
   border-radius: 9px;
   -webkit-box-shadow: 0px 12px 33px rgba(0, 0, 0, 0.06);
           box-shadow: 0px 12px 33px rgba(0, 0, 0, 0.06);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  overflow: hidden;
-  position: relative;
   padding-top: 34px;
   padding-bottom: 34px;
   padding-left: 48px;
   padding-right: 48px;
 }
-
-main .card .card-bg-image {
-  height: 90%;
-  position: absolute;
-  margin-right: -720px;
-  opacity: 0.07;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  pointer-events: none;
-}
-
-main .card.card-sm {
-  width: 566px;
-}
-
-main .card.card-lg {
-  width: 675px;
-}
-
-main .card .title {
-  text-align: center;
-}
-
-main .card .title h1 {
-  font-size: 2.4rem;
-}
-
-main .card .fields {
-  margin-top: 24px;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 15px;
-}
-
-main .card .fields form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 23px;
-}
-
-main .card .fields .or {
-  text-align: center;
-  font-weight: 600;
-  color: rgba(41, 41, 41, 0.45);
-}
-
-main .card .fields .or-line {
-  margin-top: 13px;
-  margin-bottom: 13px;
-  text-align: center;
-  font-weight: 600;
-  color: rgba(41, 41, 41, 0.45);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 20px;
-}
-
-main .card .fields .or-line div {
-  background-color: rgba(41, 41, 41, 0.4);
-  height: 1px;
-  width: 100%;
-}
-
-main .card .fields .social-logins {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  width: 100%;
-  gap: 10px;
-}
-
-main .container {
-  padding-left: 20%;
-  padding-right: 20%;
-}
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=home.css.map */
