@@ -47,7 +47,10 @@ class SignupService
                 "",
                 $this->post_data["password"],
                 $this->post_data["linked-in-id"],
-                $this->post_data["microsoft-id"]
+                $this->post_data["microsoft-id"],
+                $this->post_data["apple-id"],
+                $this->post_data["facebook-id"],
+                $this->post_data["google-id"]
             );
 
             if ($user) {
