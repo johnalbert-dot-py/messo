@@ -2,6 +2,7 @@
 
 require_once($_SERVER["DOCUMENT_ROOT"] . "/controllers/controller.php");
 require_once($_SERVER['DOCUMENT_ROOT'] . "/vendor/autoload.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/model/User.php");
 
 class HomeController extends Controller
 {
@@ -10,6 +11,8 @@ class HomeController extends Controller
 
     public function get()
     {
+        $user_id = $_SESSION["user_id"];
+        return ["users" => User::execute_sql("SELECT * FROM user WHERE id != :id", ["id" => $user_id], true)];
     }
 
     public function post()

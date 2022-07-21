@@ -128,10 +128,6 @@ main {
         }
       }
 
-      .user-action {
-        margin-top: 15px;
-      }
-
       button {
         padding: 3%;
         border-radius: 5px;
@@ -140,6 +136,7 @@ main {
         font-weight: 400;
         border: none;
         transition: 0.2s ease-in-out;
+        margin-top: 15px;
 
         &.facebook {
           background-color: $blue;
@@ -167,6 +164,12 @@ main {
           background-color: $primary-white;
           color: $primary-dark;
           outline: 1px solid $primary-dark;
+        }
+
+        &.normal {
+          background-color: $primary-dark;
+          color: $primary-white;
+          cursor: default !important;
         }
 
         &:hover {

@@ -48,225 +48,127 @@ require_once("../../controllers/Home.php");
             </div>
 
             <div class="list-of-users">
-                <div class="flat-card">
-                    <div class="user-info">
-                        <p class="username">
-                            @johndoe123
-                        </p>
-                        <p class="full-name">
-                            John Foo Doe
-                        </p>
-                        <p class='date-joined'>
-                            Join on July 19, 2022
-                        </p>
-                    </div>
-                    <div class="user-action">
-                        <button type="button" class="facebook">
-                            Add on Facebook
-                        </button>
-                    </div>
-                </div>
-                <div class="flat-card">
-                    <div class="user-info">
-                        <p class="username">
-                            @johndoe123
-                        </p>
-                        <p class="full-name">
-                            John Foo Doe 2
-                        </p>
-                        <p class='date-joined'>
-                            Join on July 19, 2022
-                        </p>
-                    </div>
-                    <div class="user-action">
-                        <button type="button" class="google">
-                            Email on Google
-                        </button>
-                    </div>
-                </div>
-                <div class="flat-card">
-                    <div class="user-info">
-                        <p class="username">
-                            @johndoe123
-                        </p>
-                        <p class="full-name">
-                            John Foo Doe 3
-                        </p>
-                        <p class='date-joined'>
-                            Join on July 19, 2022
-                        </p>
-                    </div>
-                    <div class="user-action">
-                        <button type="button" class="apple">
-                            Go To Apple Profile
-                        </button>
-                    </div>
-                </div>
-                <div class="flat-card">
-                    <div class="user-info">
-                        <p class="username">
-                            @johndoe1234
-                        </p>
-                        <p class="full-name">
-                            John Foo Doe 4
-                        </p>
-                        <p class='date-joined'>
-                            Join on July 19, 2022
-                        </p>
-                    </div>
-                    <div class="user-action">
-                        <button type="button" class="linkedin">
-                            Add Contact in LinkedIn
-                        </button>
-                    </div>
-                </div>
-                <div class="flat-card">
-                    <div class="user-info">
-                        <p class="username">
-                            @johndoe123
-                        </p>
-                        <p class="full-name">
-                            John Foo Doe
-                        </p>
-                        <p class='date-joined'>
-                            Join on July 19, 2022
-                        </p>
-                    </div>
-                    <div class="user-action">
-                        <button type="button" class="facebook">
-                            Add on Facebook
-                        </button>
-                    </div>
-                </div>
-                <div class="flat-card">
-                    <div class="user-info">
-                        <p class="username">
-                            @johndoe123
-                        </p>
-                        <p class="full-name">
-                            John Foo Doe 2
-                        </p>
-                        <p class='date-joined'>
-                            Join on July 19, 2022
-                        </p>
-                    </div>
-                    <div class="user-action">
-                        <button type="button" class="google">
-                            Email on Google
-                        </button>
-                    </div>
-                </div>
-                <div class="flat-card">
-                    <div class="user-info">
-                        <p class="username">
-                            @johndoe123
-                        </p>
-                        <p class="full-name">
-                            John Foo Doe 3
-                        </p>
-                        <p class='date-joined'>
-                            Join on July 19, 2022
-                        </p>
-                    </div>
-                    <div class="user-action">
-                        <button type="button" class="apple">
-                            Go To Apple Profile
-                        </button>
-                    </div>
-                </div>
-                <div class="flat-card">
-                    <div class="user-info">
-                        <p class="username">
-                            @johndoe1234
-                        </p>
-                        <p class="full-name">
-                            John Foo Doe 4
-                        </p>
-                        <p class='date-joined'>
-                            Join on July 19, 2022
-                        </p>
-                    </div>
-                    <div class="user-action">
-                        <button type="button" class="linkedin">
-                            Add Contact in LinkedIn
-                        </button>
-                    </div>
-                </div>
-                <div class="flat-card">
-                    <div class="user-info">
-                        <p class="username">
-                            @johndoe123
-                        </p>
-                        <p class="full-name">
-                            John Foo Doe
-                        </p>
-                        <p class='date-joined'>
-                            Join on July 19, 2022
-                        </p>
-                    </div>
-                    <div class="user-action">
-                        <button type="button" class="facebook">
-                            Add on Facebook
-                        </button>
-                    </div>
-                </div>
-                <div class="flat-card">
-                    <div class="user-info">
-                        <p class="username">
-                            @johndoe123
-                        </p>
-                        <p class="full-name">
-                            John Foo Doe 2
-                        </p>
-                        <p class='date-joined'>
-                            Join on July 19, 2022
-                        </p>
-                    </div>
-                    <div class="user-action">
-                        <button type="button" class="google">
-                            Email on Google
-                        </button>
-                    </div>
-                </div>
-                <div class="flat-card">
-                    <div class="user-info">
-                        <p class="username">
-                            @johndoe123
-                        </p>
-                        <p class="full-name">
-                            John Foo Doe 3
-                        </p>
-                        <p class='date-joined'>
-                            Join on July 19, 2022
-                        </p>
-                    </div>
-                    <div class="user-action">
-                        <button type="button" class="apple">
-                            Go To Apple Profile
-                        </button>
-                    </div>
-                </div>
-                <div class="flat-card">
-                    <div class="user-info">
-                        <p class="username">
-                            @johndoe1234
-                        </p>
-                        <p class="full-name">
-                            John Foo Doe 4
-                        </p>
-                        <p class='date-joined'>
-                            Join on July 19, 2022
-                        </p>
-                    </div>
-                    <div class="user-action">
-                        <button type="button" class="linkedin">
-                            Add Contact in LinkedIn
-                        </button>
-                    </div>
-                </div>
-            </div>
 
-        </div>
+                <?php foreach ($context["users"] as $key => $user) : ?>
+                    <div class="flat-card">
+                        <div class="user-info">
+                            <p class="username">
+                                @<?= $user["username"] ?>
+                            </p>
+                            <p class="full-name">
+                                <?= $user["first_name"] ?> <?= $user["last_name"] ?>
+                            </p>
+                            <p class='date-joined'>
+                                Joined on <?php
+                                            $time = strtotime($user["created_at"]);
+                                            $formatted = date('M d, Y', $time);
+                                            echo $formatted;
+                                            ?>
+                            </p>
+                        </div>
+                        <div class="user-action">
+                            <?php if ($user['facebook_id']) : ?>
+                                <button type="button" class="facebook">
+                                    Add on Facebook
+                                </button>
+                            <?php elseif ($user["linked_in_id"]) : ?>
+                                <button type="button" class="linkedin">
+                                    Add to Contacts
+                                </button>
+                            <?php elseif ($user["microsoft_id"]) : ?>
+                                <button type="disabled" class="normal">
+                                    Microsoft User
+                                </button>
+                            <?php elseif ($user["apple_id"]) : ?>
+                                <button type="disabled" class="normal">
+                                    Apple User
+                                </button>
+                            <?php elseif ($user["google_id"]) : ?>
+                                <button type="disabled" class="normal">
+                                    Google User
+                                </button>
+                            <?php else : ?>
+                                <button type="disabled" class="normal">
+                                    Messo User
+                                </button>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+
+                <!-- <div class="flat-card">
+                    <div class="user-info">
+                        <p class="username">
+                            @johndoe123
+                        </p>
+                        <p class="full-name">
+                            John Foo Doe
+                        </p>
+                        <p class='date-joined'>
+                            Join on July 19, 2022
+                        </p>
+                    </div>
+                    <div class="user-action">
+                        <button type="button" class="facebook">
+                            Add on Facebook
+                        </button>
+                    </div>
+                </div>
+                <div class="flat-card">
+                    <div class="user-info">
+                        <p class="username">
+                            @johndoe123
+                        </p>
+                        <p class="full-name">
+                            John Foo Doe 2
+                        </p>
+                        <p class='date-joined'>
+                            Join on July 19, 2022
+                        </p>
+                    </div>
+                    <div class="user-action">
+                        <button type="button" class="google">
+                            Email on Google
+                        </button>
+                    </div>
+                </div>
+                <div class="flat-card">
+                    <div class="user-info">
+                        <p class="username">
+                            @johndoe123
+                        </p>
+                        <p class="full-name">
+                            John Foo Doe 3
+                        </p>
+                        <p class='date-joined'>
+                            Join on July 19, 2022
+                        </p>
+                    </div>
+                    <div class="user-action">
+                        <button type="button" class="apple">
+                            Go To Apple Profile
+                        </button>
+                    </div>
+                </div>
+                <div class="flat-card">
+                    <div class="user-info">
+                        <p class="username">
+                            @johndoe1234
+                        </p>
+                        <p class="full-name">
+                            John Foo Doe 4
+                        </p>
+                        <p class='date-joined'>
+                            Join on July 19, 2022
+                        </p>
+                    </div>
+                    <div class="user-action">
+                        <button type="button" class="linkedin">
+                            Add Contact in LinkedIn
+                        </button>
+                    </div>
+                </div> -->
+            </div>
     </main>
 
 

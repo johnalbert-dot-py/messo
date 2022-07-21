@@ -537,10 +537,6 @@ main .container .flat-card .user-info .date-joined {
   font-weight: lighter;
 }
 
-main .container .flat-card .user-action {
-  margin-top: 15px;
-}
-
 main .container .flat-card button {
   padding: 3%;
   border-radius: 5px;
@@ -550,6 +546,7 @@ main .container .flat-card button {
   border: none;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
+  margin-top: 15px;
 }
 
 main .container .flat-card button.facebook {
@@ -578,6 +575,12 @@ main .container .flat-card button.microsoft {
   background-color: #f9f9f9;
   color: #292929;
   outline: 1px solid #292929;
+}
+
+main .container .flat-card button.normal {
+  background-color: #292929;
+  color: #f9f9f9;
+  cursor: default !important;
 }
 
 main .container .flat-card button:hover {
