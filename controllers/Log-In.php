@@ -23,7 +23,7 @@ class LogInController extends Controller
         }
 
         if (isset($_SESSION["logged_in"]) && $_SESSION["logged_in"]) {
-            header("Location: ./logged_in.php");
+            header("Location: /views/home/");
             die();
         } else {
             $details = ["first_name" => "", "last_name" => ""];
