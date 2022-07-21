@@ -91,4 +91,43 @@ class LoginService
             }
         }
     }
+
+
+    public static function microsoft_login($json_data = [])
+    {
+        $user = checkSocialLoginId("microsoft_id", $json_data["microsoft-id"]);
+        if ($user != 0) {
+            $_SESSION["logged_in"] = true;
+            $_SESSION["user_id"] = $user;
+            return return_success_response("Logged In", "account logged in", ["redirect" => "/views/logged_in.php"]);
+        } else {
+            // use success response because token auth is mainly done on client side
+            return return_success_response(
+                "Invalid Account",
+                "Your microsoft account is invalid",
+                ["redirect" => "/views/?using=microsoft&error=" . ERROR_CODE::$INVALID_ACCOUNT]
+            );
+        }
+    }
+
+    public static function linked_in_login()
+    {
+
+        // direct redirection is implemented because Authentication is done on back-end.
+
+        $social_auth = $_GET["using"];
+        if ($social_auth === "linked-in") {
+            $details = LinkedInSocialLogin::getDetails(false);
+            $user = checkSocialLoginId("linked_in_id", $details["id"]);
+            if ($user != 0) {
+                $_SESSION["logged_in"] = true;
+                $_SESSION["user_id"] = $user;
+                header("Location: ./logged_in.php");
+            } else {
+                header("Location: /views/?using=linked-in&error=" . ERROR_CODE::$INVALID_ACCOUNT);
+            }
+        } else {
+            return [];
+        }
+    }
 }
