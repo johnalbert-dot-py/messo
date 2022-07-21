@@ -17,6 +17,7 @@ require_once($_SERVER["DOCUMENT_ROOT"] . "/controllers/Log-In.php");
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/helvetica-neue-9" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
 
 </head>
 
