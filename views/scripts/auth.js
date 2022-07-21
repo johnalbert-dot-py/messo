@@ -62,7 +62,7 @@ createApp({
       })
         .then((response) => {
           console.log(response.data);
-          window.location.href = "/views";
+          window.location.href = "/views/home/";
         })
         .catch((err) => {
           let error = err.response.data;
