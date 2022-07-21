@@ -99,7 +99,7 @@ class LoginService
         if ($user != 0) {
             $_SESSION["logged_in"] = true;
             $_SESSION["user_id"] = $user;
-            return return_success_response("Logged In", "account logged in", ["redirect" => "/views/logged_in.php"]);
+            return return_success_response("Logged In", "account logged in", ["redirect" => "/views/home/"]);
         } else {
             // use success response because token auth is mainly done on client side
             return return_success_response(
@@ -122,7 +122,7 @@ class LoginService
             if ($user != 0) {
                 $_SESSION["logged_in"] = true;
                 $_SESSION["user_id"] = $user;
-                header("Location: ./logged_in.php");
+                header("Location: /views/home");
             } else {
                 header("Location: /views/?using=linked-in&error=" . ERROR_CODE::$INVALID_ACCOUNT);
             }
