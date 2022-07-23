@@ -1,22 +1,22 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => NULL,
+        'reference' => '9a041190b9fcbbdb39815d0ffae486c69cdf9616',
         'name' => '__root__',
         'dev' => true,
     ),
     'versions' => array(
         '__root__' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => NULL,
+            'reference' => '9a041190b9fcbbdb39815d0ffae486c69cdf9616',
             'dev_requirement' => false,
         ),
         'curl/curl' => array(
@@ -62,6 +62,15 @@
             'install_path' => __DIR__ . '/../league/oauth2-client',
             'aliases' => array(),
             'reference' => '2334c249907190c132364f5dae0287ab8666aa19',
+            'dev_requirement' => false,
+        ),
+        'league/oauth2-facebook' => array(
+            'pretty_version' => '2.2.0',
+            'version' => '2.2.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../league/oauth2-facebook',
+            'aliases' => array(),
+            'reference' => 'ec6d62a00b548c6cd56d7b734346b9e6befbfbbb',
             'dev_requirement' => false,
         ),
         'league/oauth2-linkedin' => array(
