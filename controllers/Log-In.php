@@ -19,6 +19,8 @@ class LogInController extends Controller
                     return ["error" => "Your Microsoft account is not registered to our database."];
                 } else if (isset($_GET["using"]) && $_GET["using"] == "google") {
                     return ["error" => "Your Google account is not registered to our database."];
+                } else if (isset($_GET["using"]) && $_GET["using"] == "facebook") {
+                    return ["error" => "Your Facebook account is not registered to our database."];
                 }
             }
         }
@@ -33,6 +35,8 @@ class LogInController extends Controller
                     return LoginService::linked_in_login();
                 } else if ($_GET["using"] === "google") {
                     return LoginService::google_login();
+                } else if ($_GET["using"] === "facebook") {
+                    return LoginService::facebook_login();
                 }
             } else {
                 return [];

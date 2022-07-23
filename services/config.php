@@ -43,3 +43,11 @@ class GoogleConfig
     public static $CLIENT_SECRET = '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';
     public static $REDIRECT_URI = "http://localhost/views/";
 }
+
+
+class FacebookConfig
+{
+    public static $APP_ID = "583922600014772";
+    public static $APP_SECRET = "90c916d377ef8f243d336aec88d90cf1";
+    public static $REDIRECT_URI = "http://localhost/views/";
+}

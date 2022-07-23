@@ -17,6 +17,8 @@ class SignUpController extends Controller
                 $details = LinkedInSocialLogin::getDetails();
             } else if ($social_auth === "google") {
                 $details = GoogleSocialLogin::getDetails();
+            } else if ($social_auth === "facebook") {
+                $details = FacebookSocialLogin::getDetails();
             }
         }
         return $details;

@@ -171,6 +171,53 @@ class GoogleSocialLogin extends SocialLogin
 }
 
 
+class FacebookSocialLogin extends SocialLogin
+{
+    public static function getProvider()
+    {
+        $redirect_page = self::getRedirectUrl("facebook", FacebookConfig::$REDIRECT_URI);
+        $provider = new \League\OAuth2\Client\Provider\Facebook([
+            'clientId'          => FacebookConfig::$APP_ID,
+            'clientSecret'      => FacebookConfig::$APP_SECRET,
+            'redirectUri'       => $redirect_page,
+            'graphApiVersion'   => 'v2.10',
+        ]);
+        return $provider;
+    }
+
+    public static function getDetails($verify_exists = true)
+    {
+        $provider = self::getProvider();
+        $token = self::getToken($provider);
+
+        try {
+            $user = $provider->getResourceOwner($token);
+            $facebook_id = $user->getId();
+
+            if ($verify_exists) {
+                $user_exists = checkSocialLoginId("facebook_id", $facebook_id);
+                if ($user_exists) {
+                    header("Location: http://localhost/views/sign-up.php?using=facebook&error=" . ERROR_CODE::$ALREADY_EXISTS);
+                    exit();
+                }
+            }
+            $user_data = [
+                "first_name" => $user->getFirstName(),
+                "last_name" => $user->getLastName(),
+                "username" => strtok($user->getEmail(), '@'),
+                "facebook_id" => $facebook_id,
+                "error" => "",
+            ];
+
+            return $user_data;
+        } catch (Exception $e) {
+            echo $e;
+            exit('Oh dear...');
+        }
+    }
+}
+
+
 class MicrosoftSocialLogin extends SocialLogin
 {
     public static $provider;

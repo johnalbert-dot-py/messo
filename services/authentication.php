@@ -46,6 +46,13 @@ class SignupService
             }
         }
 
+        if (isset($this->post_data['facebook-id']) && !empty($this->post_data['facebook-id'])) {
+            $google_id_exists = checkSocialLoginId("facebook_id", $this->post_data['facebook-id']);
+            if ($google_id_exists) {
+                return return_error_response("Facebook Account Already Exists", "Facebook Account is already taken.", ERROR_CODE::$ALREADY_EXISTS);
+            }
+        }
+
         if (!count($user_exists)) {
             $user = User::create(
                 $this->post_data["first_name"],
@@ -153,6 +160,24 @@ class LoginService
                 header("Location: /views/home");
             } else {
                 header("Location: /views/?using=google&error=" . ERROR_CODE::$INVALID_ACCOUNT);
+            }
+        } else {
+            return [];
+        }
+    }
+
+    public static function facebook_login()
+    {
+        $social_auth = $_GET["using"];
+        if ($social_auth === "facebook") {
+            $details = FacebookSocialLogin::getDetails(false);
+            $user = checkSocialLoginId("facebook_id", $details["facebook_id"]);
+            if ($user != 0) {
+                $_SESSION["logged_in"] = true;
+                $_SESSION["user_id"] = $user;
+                header("Location: /views/home");
+            } else {
+                header("Location: /views/?using=facebook&error=" . ERROR_CODE::$INVALID_ACCOUNT);
             }
         } else {
             return [];
