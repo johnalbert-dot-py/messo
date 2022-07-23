@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '9a041190b9fcbbdb39815d0ffae486c69cdf9616',
+        'reference' => '8e20edab1bbf56d064f4eaa8003ab6ef443f795f',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '9a041190b9fcbbdb39815d0ffae486c69cdf9616',
+            'reference' => '8e20edab1bbf56d064f4eaa8003ab6ef443f795f',
             'dev_requirement' => false,
         ),
         'curl/curl' => array(
@@ -71,6 +71,15 @@
             'install_path' => __DIR__ . '/../league/oauth2-facebook',
             'aliases' => array(),
             'reference' => 'ec6d62a00b548c6cd56d7b734346b9e6befbfbbb',
+            'dev_requirement' => false,
+        ),
+        'league/oauth2-google' => array(
+            'pretty_version' => '4.0.0',
+            'version' => '4.0.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../league/oauth2-google',
+            'aliases' => array(),
+            'reference' => 'db6d8ad67cdd7d014a1e5dd5c204a319a966de86',
             'dev_requirement' => false,
         ),
         'league/oauth2-linkedin' => array(
