@@ -32,10 +32,17 @@ class SignupService
 
         $user_exists = User::execute_sql("SELECT * FROM user WHERE username = :username", ["username" => $this->post_data['username']], true);
 
-        if (isset($this->post_data["linked-in-id"])) {
+        if (isset($this->post_data["linked-in-id"]) && !empty($this->post_data['linked-in-id'])) {
             $linked_in_id_exists  = checkSocialLoginId("linked_in_id", $this->post_data["linked-in-id"]);
             if ($linked_in_id_exists) {
                 return return_error_response("LinkedIn Account Already Exists", "LinkedIn Account is already taken.", ERROR_CODE::$ALREADY_EXISTS);
+            }
+        }
+
+        if (isset($this->post_data['google-id']) && !empty($this->post_data['google-id'])) {
+            $google_id_exists = checkSocialLoginId("google_id", $this->post_data['google-id']);
+            if ($google_id_exists) {
+                return return_error_response("Google Account Already Exists", "Google Account is already taken.", ERROR_CODE::$ALREADY_EXISTS);
             }
         }
 
@@ -121,13 +128,31 @@ class LoginService
         $social_auth = $_GET["using"];
         if ($social_auth === "linked-in") {
             $details = LinkedInSocialLogin::getDetails(false);
-            $user = checkSocialLoginId("linked_in_id", $details["id"]);
+            $user = checkSocialLoginId("linked_in_id", $details["linked_in_id"]);
             if ($user != 0) {
                 $_SESSION["logged_in"] = true;
                 $_SESSION["user_id"] = $user;
                 header("Location: /views/home");
             } else {
                 header("Location: /views/?using=linked-in&error=" . ERROR_CODE::$INVALID_ACCOUNT);
+            }
+        } else {
+            return [];
+        }
+    }
+
+    public static function google_login()
+    {
+        $social_auth = $_GET["using"];
+        if ($social_auth === "google") {
+            $details = GoogleSocialLogin::getDetails(false);
+            $user = checkSocialLoginId("google_id", $details["google_id"]);
+            if ($user != 0) {
+                $_SESSION["logged_in"] = true;
+                $_SESSION["user_id"] = $user;
+                header("Location: /views/home");
+            } else {
+                header("Location: /views/?using=google&error=" . ERROR_CODE::$INVALID_ACCOUNT);
             }
         } else {
             return [];

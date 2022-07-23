@@ -35,3 +35,11 @@ class MicrosoftConfig
         ]);
     }
 }
+
+
+class GoogleConfig
+{
+    public static $CLIENT_ID = '368377028020-isg5m4srca4kshl91le3i6vebh27cac6.apps.googleusercontent.com';
+    public static $CLIENT_SECRET = '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';
+    public static $REDIRECT_URI = "http://localhost/views/";
+}

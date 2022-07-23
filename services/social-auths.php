@@ -7,6 +7,18 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
+use League\OAuth2\Client\Provider\Google;
+
+
+function checkSocialLoginId($social_id_name = "", $id = 0)
+{
+    $id_exists = User::execute_sql("SELECT * FROM user WHERE $social_id_name = :$social_id_name", ["$social_id_name" => $id], true);
+    if (count($id_exists)) {
+        return $id_exists[0]["id"];
+    } else {
+        return 0;
+    }
+}
 
 
 abstract class SocialLogin
@@ -43,15 +55,22 @@ abstract class SocialLogin
         }
         return $redirect_page;
     }
-}
 
-function checkSocialLoginId($social_id_name = "", $id = 0)
-{
-    $id_exists = User::execute_sql("SELECT * FROM user WHERE $social_id_name = :$social_id_name", ["$social_id_name" => $id], true);
-    if (count($id_exists)) {
-        return $id_exists[0]["id"];
-    } else {
-        return 0;
+
+    public static function getToken($provider)
+    {
+        try {
+            $token = $provider->getAccessToken('authorization_code', [
+                'code' => $_GET['code']
+            ]);
+            return $token;
+        } catch (Exception $e) {
+            if (strpos("http://$_SERVER[HTTP_HOST]" . strtok($_SERVER["REQUEST_URI"], '?'), "sign-up-form.php") !== false) {
+                header("Location: http://localhost/views/sign-up.php");
+            } else {
+                header("Location: http://localhost/views/");
+            }
+        }
     }
 }
 
@@ -75,17 +94,7 @@ class LinkedInSocialLogin extends SocialLogin
     public static function getDetails($verify_exists = true)
     {
         $provider = self::getProvider();
-        try {
-            $token = $provider->getAccessToken('authorization_code', [
-                'code' => $_GET['code']
-            ]);
-        } catch (Exception $e) {
-            if (strpos("http://$_SERVER[HTTP_HOST]" . strtok($_SERVER["REQUEST_URI"], '?'), "sign-up-form.php") !== false) {
-                header("Location: http://localhost/views/sign-up.php");
-            } else {
-                header("Location: http://localhost/views/");
-            }
-        }
+        $token = self::getToken($provider);
 
         try {
             $user = $provider->getResourceOwner($token);
@@ -94,7 +103,7 @@ class LinkedInSocialLogin extends SocialLogin
             if ($verify_exists) {
                 $user_exists = checkSocialLoginId("linked_in_id", $user_linkedin_id);
                 if ($user_exists) {
-                    header("Location: http://localhost/views/sign-up.php?error=" . ERROR_CODE::$ALREADY_EXISTS);
+                    header("Location: http://localhost/views/sign-up.php?using=linked-in&error=" . ERROR_CODE::$ALREADY_EXISTS);
                     exit();
                 }
             }
@@ -102,7 +111,54 @@ class LinkedInSocialLogin extends SocialLogin
                 "first_name" => $user->getFirstName(),
                 "last_name" => $user->getLastName(),
                 "username" => strtok($user->getEmail(), '@'),
-                "id" => $user_linkedin_id,
+                "linked_in_id" => $user_linkedin_id,
+                "error" => "",
+            ];
+
+            return $user_data;
+        } catch (Exception $e) {
+            echo $e;
+            exit('Oh dear...');
+        }
+    }
+}
+
+
+class GoogleSocialLogin extends SocialLogin
+{
+    public static function getProvider()
+    {
+        $redirect_page = self::getRedirectUrl("google", GoogleConfig::$REDIRECT_URI);
+        $provider = new Google([
+            'clientId'     => GoogleConfig::$CLIENT_ID,
+            'clientSecret' => GoogleConfig::$CLIENT_SECRET,
+            'redirectUri'  => $redirect_page,
+        ]);
+        return $provider;
+    }
+
+    public static function getDetails($verify_exists = true)
+    {
+        $provider = self::getProvider();
+        $token = self::getToken($provider);
+
+
+        try {
+            $user = $provider->getResourceOwner($token);
+            $user_google_id = $user->getId();
+
+            if ($verify_exists) {
+                $user_exists = checkSocialLoginId("google_id", $user_google_id);
+                if ($user_exists) {
+                    header("Location: http://localhost/views/sign-up.php?using=google&error=" . ERROR_CODE::$ALREADY_EXISTS);
+                    exit();
+                }
+            }
+            $user_data = [
+                "first_name" => $user->getFirstName(),
+                "last_name" => $user->getLastName(),
+                "username" => strtok($user->getEmail(), '@'),
+                "google_id" => $user_google_id,
                 "error" => "",
             ];
 

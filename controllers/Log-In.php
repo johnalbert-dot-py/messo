@@ -11,13 +11,14 @@ class LogInController extends Controller
     public function get()
     {
 
-
         if (isset($_GET["error"])) {
             if ($_GET["error"] == ERROR_CODE::$INVALID_ACCOUNT) {
                 if (isset($_GET["using"]) && $_GET["using"] == "linked-in") {
                     return ["error" => "Your LinkedIn account is not registered to our database."];
                 } else if (isset($_GET["using"]) && $_GET["using"] == "microsoft") {
                     return ["error" => "Your Microsoft account is not registered to our database."];
+                } else if (isset($_GET["using"]) && $_GET["using"] == "google") {
+                    return ["error" => "Your Google account is not registered to our database."];
                 }
             }
         }
@@ -28,7 +29,11 @@ class LogInController extends Controller
         } else {
             $details = ["first_name" => "", "last_name" => ""];
             if (isset($_GET["using"])) {
-                return LoginService::linked_in_login();
+                if ($_GET["using"] === "linked-in") {
+                    return LoginService::linked_in_login();
+                } else if ($_GET["using"] === "google") {
+                    return LoginService::google_login();
+                }
             } else {
                 return [];
             }

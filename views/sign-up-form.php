@@ -34,10 +34,10 @@ require_once($_SERVER["DOCUMENT_ROOT"] . "/controllers/Sign-Up.php");
 
             <div class="fields">
                 <form @submit="signUp">
-                    <input type="hidden" name="linked-in-id" value="<?= isset($context['id']) ? $context['id'] : '' ?>" />
+                    <input type="hidden" name="linked-in-id" value="<?= isset($context['linked_in_id']) ? $context['linked_in_id'] : '' ?>" />
                     <input type="hidden" name="microsoft-id" v-model="microsoft_id" />
                     <input type="hidden" name="facebook-id" v-model="facebook_id" />
-                    <input type="hidden" name="google-id" v-model="google_id" />
+                    <input type="hidden" name="google-id" value="<?= isset($context['google_id']) ? $context['google_id'] : '' ?>" />
                     <input type="hidden" name="apple-id" v-model="apple_id" />
                     <div class="field">
                         <label for="username">Username</label>

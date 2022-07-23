@@ -1,50 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Messo | Sign Up Successfully</title>
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans" rel="stylesheet">
-    <link href="http://fonts.cdnfonts.com/css/helvetica-neue-9" rel="stylesheet">
-    <link href="http://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
-    <link rel="icon" href="/views/assets/logo.png" type="image/png">
-
-</head>
-<body>
-
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans"
+      rel="stylesheet"
+    />
+    <link
+      href="http://fonts.cdnfonts.com/css/helvetica-neue-9"
+      rel="stylesheet"
+    />
+    <link
+      href="http://fonts.cdnfonts.com/css/sf-pro-display"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/views/assets/logo.png" type="image/png" />
+  </head>
+  <body>
     <main>
-        <div class="card card-sm">
-            <div class="title">
-                <svg width="120" height="120" viewBox="0 0 145 146" style="margin-bottom: 10px;" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M68.8184 96.4141C65.7031 99.5293 60.8887 99.5293 57.7734 96.4141L39.6484 78.2891C36.5332 75.1738 36.5332 70.3594 39.6484 67.2441C42.7637 64.1289 47.5781 64.1289 50.6934 67.2441L63.4375 79.7051L94.0234 49.1191C97.1387 46.0039 101.953 46.0039 105.068 49.1191C108.184 52.2344 108.184 57.0488 105.068 60.1641L68.8184 96.4141ZM145 72.625C145 112.84 112.432 145.125 72.5 145.125C32.2852 145.125 0 112.84 0 72.625C0 32.6934 32.2852 0.125 72.5 0.125C112.432 0.125 145 32.6934 145 72.625ZM72.5 13.7188C39.9316 13.7188 13.5938 40.3398 13.5938 72.625C13.5938 105.193 39.9316 131.531 72.5 131.531C104.785 131.531 131.406 105.193 131.406 72.625C131.406 40.3398 104.785 13.7188 72.5 13.7188Z" fill="#289A33"/>
-                </svg>
-                <h1>Welcome to Messo!</h1>
-                <p>We're glad to see you here!</p>
-            </div>
-            <div class="fields" style="width: 75%">
-            </div>
-            <span style="text-align: center; margin-top: 20px; color: #000 !important;">
-                Redirecting to login <span class="time">5</span> seconds...
-            </span>
+      <div class="card card-sm">
+        <div class="title">
+          <svg
+            width="120"
+            height="120"
+            viewBox="0 0 145 146"
+            style="margin-bottom: 10px"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M68.8184 96.4141C65.7031 99.5293 60.8887 99.5293 57.7734 96.4141L39.6484 78.2891C36.5332 75.1738 36.5332 70.3594 39.6484 67.2441C42.7637 64.1289 47.5781 64.1289 50.6934 67.2441L63.4375 79.7051L94.0234 49.1191C97.1387 46.0039 101.953 46.0039 105.068 49.1191C108.184 52.2344 108.184 57.0488 105.068 60.1641L68.8184 96.4141ZM145 72.625C145 112.84 112.432 145.125 72.5 145.125C32.2852 145.125 0 112.84 0 72.625C0 32.6934 32.2852 0.125 72.5 0.125C112.432 0.125 145 32.6934 145 72.625ZM72.5 13.7188C39.9316 13.7188 13.5938 40.3398 13.5938 72.625C13.5938 105.193 39.9316 131.531 72.5 131.531C104.785 131.531 131.406 105.193 131.406 72.625C131.406 40.3398 104.785 13.7188 72.5 13.7188Z"
+              fill="#289A33"
+            />
+          </svg>
+          <h1>Welcome to Messo!</h1>
+          <p>We're glad to see you here!</p>
         </div>
+        <div class="fields" style="width: 75%"></div>
+        <span
+          style="text-align: center; margin-top: 20px; color: #000 !important"
+        >
+          Redirecting to login <span class="time">5</span> seconds...
+        </span>
+      </div>
     </main>
 
     <script>
-        let time = 5;
-        let count = setInterval(() => {
-            time--;
-            document.querySelector(".time").innerHTML = time;
-            if (time <= 0) {
-                clearInterval(count)
-                document.location.href = "/views/"
-            }
-        }, 1000)
+      let time = 5;
+      let count = setInterval(() => {
+        time--;
+        document.querySelector(".time").innerHTML = time;
+        if (time <= 0) {
+          clearInterval(count);
+          document.location.href = "/views/";
+        }
+      }, 1000);
     </script>
-
-</body>
+  </body>
 </html>
