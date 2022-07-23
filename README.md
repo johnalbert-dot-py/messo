@@ -9,7 +9,7 @@ MySQL >= 15.1
 
 # Tokens
 
-All Tokens and IDs are location on a configuration file: ```services/config.php```
+All Tokens and IDs are located on a configuration file: ```services/config.php```
 
 # Dev Accounts
 
